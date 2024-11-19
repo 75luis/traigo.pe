@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traigo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo del E-commerce -->
+            <!-- Contenedor del logo y el nombre -->
+            <div class="logo-nombre">
+                <img src="assets/images/logo-tienda.png" alt="Logo E-commerce" class="logo-header">
+                <h1>Traigo</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="https://traigo.netlify.app/" target="_blank">Nosotros</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><button id="btn-carrito" class="btn-carrito">Carrito (0)</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="productos" class="productos-section">
+            <h2>Nuestros Productos</h2>
+            <!-- Campo de búsqueda -->
+            <div class="buscador">
+                <input type="text" id="buscador-input" placeholder="Buscar productos...">
+            </div>
+            <div class="lista-productos">
+                <!-- Los productos se agregarán dinámicamente aquí -->
+            </div>
+        </section>
+
+        <!-- Sección de anuncios -->
+        <section class="anuncios-section">
+            <h2>Anuncios</h2>
+            <div class="anuncio-dinamico">
+                <a id="anuncio-enlace" href="https://www.ejemplo1.com" target="_blank">
+                    <img id="anuncio-imagen" src="assets/images/anuncio1.jpg" alt="Anuncio" class="anuncio-imagen">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Ventana del carrito -->
+    <div id="carrito-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-items"></div>
+            <p id="total-carrito">Total: S/0</p>
+            <button id="btn-pagar" class="btn-pagar">Pagar</button>
+        </div>
+    </div>
+
+    <!-- Modal para información del producto -->
+    <div id="producto-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="producto-nombre"></h2>
+            <img id="producto-imagen" src="" alt="Imagen del Producto" class="producto-modal-imagen">
+            <p id="producto-descripcion"></p>
+            <p id="producto-precio"></p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; 2024 Traigo E-commerce. Todos los derechos reservados.</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

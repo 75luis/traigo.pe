@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            
+            <h1>Pagar</h1>
+        </div>
+        
+    </header>
+    
+    <main>
+        <section class="pago-section">
+            <h2>Selecciona tu método de pago</h2>
+            <form id="pago-form">
+                <div>
+                    <label>
+                        <input type="radio" name="metodo-pago" value="efectivo" required>
+                        Efectivo
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="metodo-pago" value="bcp" required>
+                        Transferencia bancaria (BCP)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="metodo-pago" value="yape" required>
+                        Billetera digital (Yape)
+                    </label>
+                </div>
+                <div id="detalles-pago" class="detalles-pago">
+                    <!-- Los detalles del método de pago seleccionado se mostrarán aquí -->
+                </div>
+                <button type="submit" class="btn-pagar">Confirmar Pago</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Traigo E-commerce. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const detallesPago = document.getElementById("detalles-pago");
+            const pagoForm = document.getElementById("pago-form");
+
+            // Función para mostrar detalles según el método de pago
+            pagoForm.addEventListener("change", (event) => {
+                if (!event.target.name === "metodo-pago") return;
+
+                const metodo = event.target.value;
+                switch (metodo) {
+                    case "efectivo":
+                        detallesPago.innerHTML = `
+                            <h3>Código CIP</h3>
+                            <p>Utiliza el siguiente código CIP para realizar el pago: <strong>1234567890</strong></p>
+                        `;
+                        break;
+                    case "bcp":
+                        detallesPago.innerHTML = `
+                            <h3>Transferencia Bancaria</h3>
+                            <p>Realiza la transferencia al siguiente número de cuenta BCP:</p>
+                            <p><strong>56090546739095</strong></p>
+                        `;
+                        break;
+                    case "yape":
+                        detallesPago.innerHTML = `
+                            <h3>Billetera Digital (Yape)</h3>
+                            <p>Usa este número para realizar el pago:</p>
+                            <p><strong>965360812</strong></p>
+                            <p>O escanea el siguiente código QR:</p>
+                            <img src="assets/images/yape-qr.png" alt="Código QR Yape" class="qr-yape">
+                        `;
+                        break;
+                }
+            });
+
+            // Confirmar pago
+            pagoForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const metodo = document.querySelector('input[name="metodo-pago"]:checked').value;
+                alert(`Has confirmado el pago con el método: ${metodo}`);
+                window.location.href = "index.html"; // Redirigir a la página principal después del pago
+            });
+        });
+    </script>
+</body>
+</html>

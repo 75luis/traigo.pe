@@ -1,0 +1,446 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #4702f4;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a,
+.btn-carrito {
+    color: #fff;
+    text-decoration: none;
+    background: #346293;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-carrito:hover {
+    background: #0056b3;
+}
+
+/* Sección de productos */
+.productos-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.lista-productos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.btn-agregar {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-agregar:hover {
+    background-color: #218838;
+}
+
+/* Modal del carrito */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#carrito-items {
+    margin: 1rem 0;
+}
+
+/* Item del carrito */
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.item-carrito p {
+    margin: 0;
+    flex: 1;
+}
+
+.input-cantidad {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.item-detalle {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-precios {
+    text-align: right;
+    margin-left: 10px;
+    flex: 2;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+
+/* Botón de pagar */
+.btn-pagar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-pagar:hover {
+    background-color: #0056b3;
+}
+
+/* Sección de pago */
+.pago-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.pago-section form {
+    display: inline-block;
+    text-align: left;
+}
+
+.pago-section div {
+    margin-bottom: 1rem;
+}
+
+/* Logo principal */
+.logo-tienda {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.logo-principal {
+    width: 150px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1);
+}
+
+.icono-red-social {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* Sección de anuncios dinámicos */
+.anuncios-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.anuncios-section h2 {
+    margin-bottom: 1.5rem;
+    color: #4702f4; /* Color azul agradable */
+}
+
+.anuncio-dinamico {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.anuncio-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.anuncio-imagen:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Contenedor del encabezado */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* Contenedor del logo y nombre */
+.logo-nombre {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo y el texto */
+    gap: 0.5rem; /* Espaciado entre el logo y el nombre */
+}
+
+/* Logo en el encabezado */
+.logo-header {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* Título del encabezado */
+.logo-nombre h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+
+/* Buscador */
+.buscador {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.buscador input {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+
+
+
+
+
+
+/* Modal del producto */
+#producto-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Sección de detalles de pago */
+.detalles-pago {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detalles-pago h3 {
+    margin-top: 0;
+    color: #4702f4;
+}
+
+.qr-yape {
+    width: 150px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Botones de navegación */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.btn-navegacion {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-navegacion:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-navegacion:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
